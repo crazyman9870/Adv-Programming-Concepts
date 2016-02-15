@@ -1,0 +1,39 @@
+package Client.SearchGui;
+
+import static servertester.views.Constants.*;
+
+import java.awt.*;
+
+import javax.swing.*;
+
+public class LogInFrame extends JFrame {
+	
+	private HostPanel _hostPanel;
+	private LogInPanel _credentialsPanel;
+
+	public LogInFrame() {
+		super();
+
+		setTitle("Log In");
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		setLayout(new BoxLayout(getContentPane(), BoxLayout.PAGE_AXIS));
+		
+		add(Box.createRigidArea(DOUBLE_VSPACE));
+		
+		_hostPanel = new HostPanel();
+		add(_hostPanel);
+		
+		add(Box.createRigidArea(DOUBLE_VSPACE));
+		
+		_credentialsPanel = new LogInPanel();
+		add(_credentialsPanel);
+		
+		add(Box.createRigidArea(DOUBLE_VSPACE));
+		
+		pack();
+		
+		setMinimumSize(getPreferredSize());
+	}	
+}

@@ -1,0 +1,26 @@
+package Client.SearchGui;
+
+import java.awt.EventQueue;
+
+public class RunSearchGui {
+	
+	public static void main(String[] args) {
+		
+		EventQueue.invokeLater(
+				new Runnable() {
+					public void run() {
+						LogInFrame frame = new LogInFrame();
+
+						frame.setVisible(true);
+						
+						SearchFrame frame2 = new SearchFrame();
+						
+						frame2.setVisible(true);
+						
+						
+						
+					}
+				}
+		);
+	}
+}

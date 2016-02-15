@@ -1,0 +1,35 @@
+package Client.SearchGui;
+
+import static servertester.views.Constants.*;
+
+import javax.swing.*;
+
+@SuppressWarnings("serial")
+public class ParamsPanel extends JPanel {
+	
+	private JTextField _valuesTextField;
+
+	public ParamsPanel() {
+		super();
+		
+		setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
+		
+		add(Box.createRigidArea(DOUBLE_HSPACE));
+		add(new JLabel("VALUES:"));
+		add(Box.createRigidArea(SINGLE_HSPACE));
+		
+		_valuesTextField = new JTextField(8);
+		_valuesTextField.setMinimumSize(_valuesTextField.getPreferredSize());
+		add(_valuesTextField);
+		add(Box.createRigidArea(TRIPLE_HSPACE));
+	}
+	
+	public void setHost(String value) {
+		_valuesTextField.setText(value);
+	}
+
+	public String getHost() {
+		return _valuesTextField.getText();
+	}
+
+}

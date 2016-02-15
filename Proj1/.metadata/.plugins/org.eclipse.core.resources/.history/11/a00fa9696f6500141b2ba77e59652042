@@ -1,0 +1,12 @@
+package Client.SearchGui;
+
+import javax.swing.*;
+
+public class ResultFrame extends JFrame {
+
+	private TextBoxPanel _imagesPanel;
+	
+	private JButton _executeButton;
+	
+	
+}

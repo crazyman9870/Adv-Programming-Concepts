@@ -1,0 +1,33 @@
+package Client.SearchGui;
+
+import static servertester.views.Constants.*;
+
+import java.awt.*;
+
+import javax.swing.*;
+
+@SuppressWarnings("serial")
+public class TextBoxPanel extends JPanel {
+
+	private JTextArea _projectsTextArea;
+
+	public TextBoxPanel(String label) {
+		super();
+		
+		setBorder(BorderFactory.createTitledBorder(label));
+		
+		setLayout(new BorderLayout());
+		
+		_projectsTextArea = new JTextArea(10, 60);
+		add(new JScrollPane(_projectsTextArea), BorderLayout.CENTER);
+	}
+	
+	public void setText(String value) {
+		_projectsTextArea.setText(value);
+	}
+	
+	public String getText() {
+		return _projectsTextArea.getText();
+	}
+	
+}
